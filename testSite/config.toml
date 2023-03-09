@@ -1,0 +1,5 @@
+
+baseURL = "/"
+title = "pico-hugo"
+languageCode = "en-us"
+theme = "pico-hugo"

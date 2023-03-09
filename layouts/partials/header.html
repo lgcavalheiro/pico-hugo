@@ -1,0 +1,30 @@
+<header>
+  <nav class="container">
+    <ul>
+      <li>
+        <a href="{{ .Site.BaseURL }}" role="button" class="outline contrast">
+          <strong>{{ .Site.Title }}</strong>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      {{- range sort (where .Site.Home.Pages "Kind" "page") "Name" "asc" }}
+      <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+    <ul>
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link">
+            {{ T "header.dropdownTitle" }}
+          </summary>
+          <ul role="listbox">
+            {{- range sort .Site.Sections "Name" "asc" }}
+            <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+            {{- end }}
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+    {{ .Content }}
+    {{- range sort .Site.Sections "Name" "asc" }}
+        <h1>{{ .Name }}</h1>
+        {{- range .Pages }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{- end }}
+    {{- end }}
+{{ end }}

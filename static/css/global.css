@@ -1,0 +1,22 @@
+main {
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--card-background-color);
+  max-height: 64px;
+  align-content: center;
+  display: grid;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  height: 64px;
+  margin-top: -64px;
+}
+
+.centered-content {
+  display: grid;
+  justify-content: center;
+}

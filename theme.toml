@@ -1,0 +1,16 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Pico Hugo"
+license = "GNU GPLv3"
+licenselink = "https://github.com/Illumina/licenses/blob/master/gpl-3.0.txt"
+description = ""
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Lucas Cavalheiro"
+  homepage = "https://www.lgcavalheiro.xyz/"
+

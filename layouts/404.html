@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article>
+  <header>{{ T "404.header" }}</header>
+  {{ T "404.body" }}
+  <footer>{{ T "404.footer" . | safeHTML }}</footer>
+</article>
+{{ end }}
