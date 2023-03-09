@@ -8,6 +8,6 @@
     "dropdownTitle": "Sections"
   },
   "footer": {
-    "smallText": "The <a href='#' target='__blank'>pico-hugo</a> theme is made possible by <a href='https://gohugo.io/' target='__blank'>Hugo</a> and <a href='https://picocss.com' target='__blank'>Picocss</a>."
+    "smallText": "The <a href='https://github.com/lgcavalheiro/pico-hugo' target='__blank'>pico-hugo</a> theme is made possible by <a href='https://gohugo.io/' target='__blank'>Hugo</a> and <a href='https://picocss.com' target='__blank'>Picocss</a>."
   }
 }
