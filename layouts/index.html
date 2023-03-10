@@ -1,11 +1,18 @@
-{{ define "main" }}
-    {{ .Content }}
-    {{- range sort .Site.Sections "Name" "asc" }}
-        <h1>{{ .Name }}</h1>
-        {{- range .Pages }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
-        {{- end }}
+{{ define "main" }} {{ .Content }}
+<div class="card-grid">
+  {{- range sort .Site.Sections "Name" "asc" }}
+  <article>
+    <header>{{ .Name }}</header>
+    {{- range .Pages | first 5 }}
+    <li>
+      {{ .Date.Format "06-01-02 15:04" }} -
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
     {{- end }}
+    <footer>
+      <a href="{{ .Permalink }}"><i>{{ T "index.seeAll" . }}</i></a>
+    </footer>
+  </article>
+  {{- end }}
+</div>
 {{ end }}

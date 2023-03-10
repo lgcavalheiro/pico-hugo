@@ -20,3 +20,15 @@ footer {
   display: grid;
   justify-content: center;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+@media (max-width: 769px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

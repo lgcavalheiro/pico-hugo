@@ -4,7 +4,7 @@ FLAGS=-s ${DEVSITE} --themesDir ../../
 CONTENT_DIR=${DEVSITE}/content
 
 serve:
-	hugo ${FLAGS} serve
+	hugo ${FLAGS} -D serve
 
 # using package perl-text-lorem for lorem ipsum generation
 new:
