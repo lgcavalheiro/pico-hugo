@@ -1,1 +1,4 @@
-{{ define "main" }} {{ .Content }} {{ end }}
+{{ define "main" }} 
+    {{ .Content }} 
+    {{ partial "next-prev.html" . }} 
+{{ end }}

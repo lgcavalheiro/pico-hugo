@@ -12,5 +12,9 @@
   },
   "index": {
     "seeAll": "See all {{ .Name }}"
+  },
+  "nextPrev": {
+    "prev": "Go to {{ .Name }} (previous)",
+    "next": "Go to {{ .Name }} (next)"
   }
 }

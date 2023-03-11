@@ -16,9 +16,15 @@ footer {
   margin-top: -64px;
 }
 
+.link-nav a {
+  border: none;
+}
+
 .centered-content {
   display: grid;
   justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .card-grid {

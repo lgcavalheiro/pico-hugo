@@ -1,8 +1,16 @@
 {{ define "main" }}
-    {{ range .Pages}}
-    <article>
-        <header><a href="{{ .Permalink }}">{{ .Name }}</a></header>
-        {{ .Summary }}
-    </article>
-    {{ end }}
+    {{ $paginator := .Paginate .Pages.ByDate }}
+    <div class="card-grid">
+        {{ range $paginator.Pages }}
+        <article>
+            <header><a href="{{ .Permalink }}">{{ .Name }}</a></header>
+            {{ if .Truncated }}
+                {{ .Summary | truncate 256 }}
+            {{ else }}
+                {{ .Summary }}
+            {{ end }}
+        </article>
+        {{ end }}
+    </div>
+    {{ partial "paginator.html" $paginator }}
 {{ end }}

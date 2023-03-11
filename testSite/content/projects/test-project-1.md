@@ -1,6 +1,7 @@
 ---
 title: "Test Project 1"
 date: "2023-03-09T00:26:03-03:00"
+useNextPrev: true
 ---
 
 # Test project 1

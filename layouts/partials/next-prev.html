@@ -1,0 +1,13 @@
+{{ if .Params.useNextPrev }} {{ if or .PrevInSection .NextInSection }}
+<nav>
+  <ul></ul>
+  <ul>
+    {{ with .PrevInSection }}
+    <li><a href="{{ .Permalink }}">{{ T "nextPrev.prev" . }}</a></li>
+    {{ end }} {{ with .NextInSection }}
+    <li><a href="{{ .Permalink }}">{{ T "nextPrev.next" . }}</a></li>
+    {{ end }}
+  </ul>
+  <ul></ul>
+</nav>
+{{ end }} {{ end }}

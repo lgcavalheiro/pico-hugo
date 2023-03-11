@@ -1,0 +1,27 @@
+{{ if gt .TotalPages 1 }}
+<nav class="link-nav">
+    <ul>
+        <li><a href="{{ .First.URL }}" 
+                role="button" class="outline"
+                {{ if not .HasPrev }}disabled{{ end }}>{{ "<<" }}</a></li>
+        <li><a href="{{ if .HasPrev }}{{ .Prev.URL }}{{ end }}" 
+                role="button" class="outline"
+                {{ if not .HasPrev }}disabled{{ end }}>{{ "<" }}</a></li>
+    </ul>
+    <ul>
+        {{ range .Pagers }}
+            <li><a href="{{ .URL }}" 
+                    role="button" class="outline {{ if eq . $ }}contrast{{ end }}"
+                    {{ if eq . $ }}disabled{{ end }}>{{ .PageNumber }}</a></li>
+        {{ end }}
+    </ul>
+    <ul>
+        <li><a href="{{ if .HasNext }}{{ .Next.URL }}{{ end }}"
+                role="button" class="outline"
+                {{ if not .HasNext }}disabled{{ end }}>{{ ">" }}</a></li>
+        <li><a href="{{ .Last.URL }}" 
+                role="button" class="outline"
+                {{ if not .HasNext }}disabled{{ end }}>{{ ">>" }}</a></li>
+    </ul>
+</nav>
+{{ end }}

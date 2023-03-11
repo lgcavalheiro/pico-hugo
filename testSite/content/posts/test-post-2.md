@@ -1,6 +1,7 @@
 ---
 title: "Test Post 2"
 date: "2023-03-09T00:37:30-03:00"
+useNextPrev: true
 ---
 
 
