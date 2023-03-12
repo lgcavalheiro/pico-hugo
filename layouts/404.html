@@ -2,6 +2,9 @@
 <article>
   <header>{{ T "404.header" }}</header>
   {{ T "404.body" }}
+  <svg class="feather white">
+    <use href="/assets/feather-sprite.svg#frown" />
+  </svg>
   <footer>{{ T "404.footer" . | safeHTML }}</footer>
 </article>
 {{ end }}

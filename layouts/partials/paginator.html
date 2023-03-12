@@ -3,10 +3,18 @@
     <ul>
         <li><a href="{{ .First.URL }}" 
                 role="button" class="outline"
-                {{ if not .HasPrev }}disabled{{ end }}>{{ "<<" }}</a></li>
+                {{ if not .HasPrev }}disabled{{ end }}>
+                <svg class="feather">
+                    <use href="/assets/feather-sprite.svg#chevrons-left"/>
+                </svg>
+            </a></li>
         <li><a href="{{ if .HasPrev }}{{ .Prev.URL }}{{ end }}" 
                 role="button" class="outline"
-                {{ if not .HasPrev }}disabled{{ end }}>{{ "<" }}</a></li>
+                {{ if not .HasPrev }}disabled{{ end }}>
+                <svg class="feather">
+                    <use href="/assets/feather-sprite.svg#chevron-left"/>
+                </svg>
+            </a></li>
     </ul>
     <ul>
         {{ range .Pagers }}
@@ -18,10 +26,18 @@
     <ul>
         <li><a href="{{ if .HasNext }}{{ .Next.URL }}{{ end }}"
                 role="button" class="outline"
-                {{ if not .HasNext }}disabled{{ end }}>{{ ">" }}</a></li>
+                {{ if not .HasNext }}disabled{{ end }}>
+                <svg class="feather">
+                    <use href="/assets/feather-sprite.svg#chevron-right"/>
+                </svg>
+            </a></li>
         <li><a href="{{ .Last.URL }}" 
                 role="button" class="outline"
-                {{ if not .HasNext }}disabled{{ end }}>{{ ">>" }}</a></li>
+                {{ if not .HasNext }}disabled{{ end }}>
+                <svg class="feather">
+                    <use href="/assets/feather-sprite.svg#chevrons-right"/>
+                </svg>
+            </a></li>
     </ul>
 </nav>
 {{ end }}

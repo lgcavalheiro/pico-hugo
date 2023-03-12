@@ -10,7 +10,11 @@
     <ul class="mobile-nav">
       <li>
         <details role="list" dir="rtl">
-          <summary aria-haspopup="listbox" role="link">Menu</summary>
+          <summary aria-haspopup="listbox" role="link">
+            <svg class="feather">
+              <use href="/assets/feather-sprite.svg#menu"/>
+            </svg>
+          </summary>
           <ul role="listbox">
             {{ partial "header/pages.html" . }}
             <hr />

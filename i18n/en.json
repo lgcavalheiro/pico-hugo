@@ -1,7 +1,7 @@
 {
   "404": {
     "header": "404 - Page not found",
-    "body": "Oops! The page you were looking for seems to not exist :(",
+    "body": "Oops! The page you were looking for seems to not exist",
     "footer": "Click <a href=\"{{ .Site.BaseURL }}\">here</a> to go back to home"
   },
   "header": {
@@ -14,7 +14,6 @@
     "seeAll": "See all {{ .Name }}"
   },
   "nextPrev": {
-    "prev": "Go to {{ .Name }} (previous)",
-    "next": "Go to {{ .Name }} (next)"
+    "goTo": "Go to {{ .Name }}"
   }
 }

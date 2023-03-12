@@ -41,6 +41,28 @@ footer {
   display: none;
 }
 
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.feather:hover {
+  stroke: var(--primary-hover);
+}
+
+.white {
+  stroke: var(--color)
+}
+
+.white:hover {
+  stroke: var(--color);
+}
+
 @media (max-width: 769px) {
   .card-grid {
     grid-template-columns: 1fr;
@@ -52,5 +74,9 @@ footer {
 
   .mobile-nav {
     display: block;
+  }
+
+  .next-prev {
+    font-size: 14px;
   }
 }
