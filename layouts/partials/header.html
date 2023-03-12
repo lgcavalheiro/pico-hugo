@@ -7,21 +7,29 @@
         </a>
       </li>
     </ul>
-    <ul>
-      {{- range sort (where .Site.Home.Pages "Kind" "page") "Name" "asc" }}
-      <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
-      {{- end }}
+    <ul class="mobile-nav">
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link">Menu</summary>
+          <ul role="listbox">
+            {{ partial "header/pages.html" . }}
+            <hr />
+            {{ partial "header/sections.html" . }}
+          </ul>
+        </details>
+      </li>
     </ul>
-    <ul>
+    <ul class="desktop-nav">
+      {{ partial "header/pages.html" . }}
+    </ul>
+    <ul class="desktop-nav">
       <li>
         <details role="list" dir="rtl">
           <summary aria-haspopup="listbox" role="link">
             {{ T "header.dropdownTitle" }}
           </summary>
           <ul role="listbox">
-            {{- range sort .Site.Sections "Name" "asc" }}
-            <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
-            {{- end }}
+            {{ partial "header/sections.html" . }}
           </ul>
         </details>
       </li>
