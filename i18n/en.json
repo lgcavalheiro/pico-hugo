@@ -15,5 +15,8 @@
   },
   "nextPrev": {
     "goTo": "Go to {{ .Name }}"
+  },
+  "related": {
+    "related": "Related content:"
   }
 }

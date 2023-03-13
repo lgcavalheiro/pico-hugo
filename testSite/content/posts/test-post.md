@@ -2,6 +2,7 @@
 title: "Test post"
 date: 2023-02-22T20:08:44-03:00
 useNextPrev: true
+tags: ["tag-1", "tag-2", "special"]
 ---
 
 # Test post

@@ -1,0 +1,11 @@
+{{ $taxonomy := "tags" }}
+{{ with .Param $taxonomy }}
+<div class="centered-content unjustified">
+    <span>{{ T "related.related" }}</span>
+    <div>
+        {{ range . }} 
+        <a href="{{ printf "/%s/%s" $taxonomy . }}">{{ . }}</a>
+        {{- end -}}
+    </div>
+</div>
+{{ end }}

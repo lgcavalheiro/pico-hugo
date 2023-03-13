@@ -27,6 +27,10 @@ footer {
   text-align: center;
 }
 
+.unjustified {
+  justify-content: inherit;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -56,7 +60,7 @@ footer {
 }
 
 .white {
-  stroke: var(--color)
+  stroke: var(--color);
 }
 
 .white:hover {
