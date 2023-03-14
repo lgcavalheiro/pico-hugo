@@ -4,3 +4,6 @@ title = "pico-hugo"
 languageCode = "en-us"
 theme = "pico-hugo"
 paginate = 4
+
+[params]
+    breadcrumb = true

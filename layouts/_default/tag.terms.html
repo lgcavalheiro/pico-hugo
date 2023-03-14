@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article>
+  <header>{{ T "tag.header" }}</header>
+  <ul>
+    <div class="card-grid">
+      {{ range .Pages }}
+      <a href="{{ .Permalink }}"><li>{{ .Name | humanize }}</li></a>
+      {{ end }}
+    </div>
+  </ul>
+</article>
+{{ end }}

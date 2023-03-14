@@ -4,7 +4,7 @@
     <span>{{ T "related.related" }}</span>
     <div>
         {{ range . }} 
-        <a href="{{ printf "/%s/%s" $taxonomy . }}">{{ . }}</a>
+        <a href="{{ printf "/%s/%s" $taxonomy . }}">{{ humanize . }}</a>
         {{- end -}}
     </div>
 </div>

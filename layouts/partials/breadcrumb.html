@@ -1,0 +1,12 @@
+{{ if $.Site.Params.breadcrumb }}
+  {{ with .Ancestors.Reverse }}
+  <nav aria-label="breadcrumb">
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .Permalink }}">{{ humanize .Title }}</a></li>
+      {{ end }}
+      <li aria-current="page">{{ humanize $.Page.Title }}</li>
+    </ul>
+  </nav>
+  {{ end }}
+{{ end }}

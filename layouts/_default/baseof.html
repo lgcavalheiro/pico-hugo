@@ -4,6 +4,7 @@
   <body>
     {{ partial "header.html" . }}
     <main class="container">
+      {{ partial "breadcrumb.html" . }}
       {{ block "main" . }} {{ end }} 
       {{ partial "related.html" . }}
     </main>

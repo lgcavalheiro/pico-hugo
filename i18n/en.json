@@ -18,5 +18,8 @@
   },
   "related": {
     "related": "Related content:"
+  },
+  "tag": {
+    "header": "Site tags"
   }
 }
