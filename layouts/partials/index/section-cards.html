@@ -1,0 +1,16 @@
+<div class="card-grid">
+  {{ range sort .Site.Sections "Name" "asc" }}
+  <article>
+    <header>{{ .Name }}</header>
+    {{ range .Pages | first 5 }}
+    <li>
+      <i>{{ .Date.Format "06-01-02 15:04" }}</i> -
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+    <footer>
+      <a href="{{ .Permalink }}"><i>{{ T "index.seeAll" . }}</i></a>
+    </footer>
+  </article>
+  {{ end }}
+</div>

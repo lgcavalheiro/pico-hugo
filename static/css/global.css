@@ -67,6 +67,10 @@ footer {
   stroke: var(--color);
 }
 
+.column-list {
+  columns: 2;
+}
+
 @media (max-width: 769px) {
   .card-grid {
     grid-template-columns: 1fr;
@@ -82,5 +86,9 @@ footer {
 
   .next-prev {
     font-size: 14px;
+  }
+
+  .column-list {
+    columns: 1;
   }
 }

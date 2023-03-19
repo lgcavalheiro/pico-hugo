@@ -1,0 +1,20 @@
+<h2>{{ T "index.content" }}</h2>
+<ul class="column-list">
+  {{ range .Site.RegularPages | first 16 }}
+  <li>
+    <i>{{ .Date.Format "06-01-02 15:04" }}</i> -
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+<p>
+  {{ T "index.sections" }} {{ range sort .Site.Sections "Name" "asc" }}
+  <a href="{{ .Permalink }}">{{ .Name | humanize }}</a>
+  {{ end }}
+</p>
+<p>
+  {{ T "index.tags" }}
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+  <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }}</a>
+  {{ end }}
+</p>

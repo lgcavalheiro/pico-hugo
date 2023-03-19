@@ -1,18 +1,9 @@
-{{ define "main" }} {{ .Content }}
-<div class="card-grid">
-  {{ range sort .Site.Sections "Name" "asc" }}
-  <article>
-    <header>{{ .Name }}</header>
-    {{ range .Pages | first 5 }}
-    <li>
-      <i>{{ .Date.Format "06-01-02 15:04" }}</i> -
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-    <footer>
-      <a href="{{ .Permalink }}"><i>{{ T "index.seeAll" . }}</i></a>
-    </footer>
-  </article>
+{{ define "main" }} 
+  {{ .Content }}
+  {{ $sectionType := default "cards" $.Site.Params.sectionType }}
+  {{ if eq $sectionType "cards" }}
+    {{ partial "index/section-cards.html" . }}
+  {{ else if eq $sectionType "single" }}
+    {{ partial "index/section-single.html" . }}
   {{ end }}
-</div>
 {{ end }}
