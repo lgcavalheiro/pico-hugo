@@ -5,19 +5,23 @@
     {{ with .PrevInSection }}
     <li>
       <a href="{{ .Permalink }}" class="next-prev">
-        <svg class="feather">
-          <use href="/assets/feather-sprite.svg#chevrons-left" />
-        </svg>
-        {{ T "nextPrev.goTo" . }}
+        <span>
+          <svg class="feather">
+            <use href="/assets/feather-sprite.svg#chevrons-left" />
+          </svg>
+          {{ .Name }}
+        </span>
       </a>
     </li>
     {{ end }} {{ with .NextInSection }}
     <li>
       <a href="{{ .Permalink }}" class="next-prev">
-        {{ T "nextPrev.goTo" . }}
-        <svg class="feather">
-          <use href="/assets/feather-sprite.svg#chevrons-right" />
-        </svg>
+        <span>
+          {{ .Name }}
+          <svg class="feather">
+            <use href="/assets/feather-sprite.svg#chevrons-right" />
+          </svg>
+        </span>
       </a>
     </li>
     {{ end }}

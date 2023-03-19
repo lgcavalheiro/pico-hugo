@@ -1,0 +1,38 @@
+{{ $url := "" }}
+{{ $svg := "/assets/feather-sprite.svg#external-link" }}
+{{ $type := .Get "type" }}
+
+{{ if eq $type "github" }}
+    {{ $url = "https://github.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#github" }}
+{{ else if eq $type "linkedin" }}
+    {{ $url = "https://linkedin.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#linkedin" }}
+{{ else if eq $type "facebook" }}
+    {{ $url = "https://facebook.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#facebook" }}
+{{ else if eq $type "twitter" }}
+    {{ $url = "https://twitter.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#twitter" }}
+{{ else if eq $type "twitch" }}
+    {{ $url = "https://twitch.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#twitch" }}
+{{ else if eq $type "instagram" }}
+    {{ $url = "https://instagram.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#instagram" }}
+{{ else if eq $type "dribbble" }}
+    {{ $url = "https://dribbble.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#dribbble" }}
+{{ else if eq $type "gitlab" }}
+    {{ $url = "https://gitlab.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#gitlab" }}
+{{ else if eq $type "youtube" }}
+    {{ $url = "https://youtube.com/" }}
+    {{ $svg = "/assets/feather-sprite.svg#youtube" }}
+{{ end }}
+
+<a href="{{ $url }}{{ .Get "profile" }}" target="__blank">
+  <svg class="feather">
+    <use href="{{ $svg }}" />
+  </svg>
+</a>

@@ -18,3 +18,10 @@ $$ P(x) = \frac{n!}{x! \cdot (n - x)!} \cdot p^x \cdot (1 - p)^{n - x} $$
 Formula: $ \int(x) = \lambda \cdot {e}^{-\lambda - x} $
 
 All examples using [Katex](https://katex.org/)
+
+{{< author "Lucas Cavalheiro" >}}
+    {{< social type="github" profile="lgcavalheiro" >}}
+    {{< social type="linkedin" profile="lgcavalheiro" >}}
+    {{< social type="gitlab" profile="lgcavalheiro" >}}
+    {{< social profile="https://lgcavalheiro.xyz/" >}}
+{{< /author >}}

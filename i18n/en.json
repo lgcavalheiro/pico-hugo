@@ -16,13 +16,13 @@
     "tags": "Available tags:",
     "content": "Latest content"
   },
-  "nextPrev": {
-    "goTo": "Go to {{ .Name }}"
-  },
   "related": {
     "related": "Related content:"
   },
   "tag": {
     "header": "Site tags"
+  },
+  "shortcode": {
+    "writtenBy": "Written by {{ . }}"
   }
 }
