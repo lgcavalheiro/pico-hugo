@@ -1,0 +1,45 @@
+{{ with . }}
+<li>
+    <i>Socials</i>
+    <br>
+    {{ range . }}
+        {{ $url := "" }}
+        {{ $svg := "/assets/feather-sprite.svg#external-link" }}
+
+        {{ if eq .platform "github" }}
+            {{ $url = "https://github.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#github" }}
+        {{ else if eq .platform "linkedin" }}
+            {{ $url = "https://linkedin.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#linkedin" }}
+        {{ else if eq .platform "facebook" }}
+            {{ $url = "https://facebook.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#facebook" }}
+        {{ else if eq .platform "twitter" }}
+            {{ $url = "https://twitter.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#twitter" }}
+        {{ else if eq .platform "twitch" }}
+            {{ $url = "https://twitch.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#twitch" }}
+        {{ else if eq .platform "instagram" }}
+            {{ $url = "https://instagram.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#instagram" }}
+        {{ else if eq .platform "dribbble" }}
+            {{ $url = "https://dribbble.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#dribbble" }}
+        {{ else if eq .platform "gitlab" }}
+            {{ $url = "https://gitlab.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#gitlab" }}
+        {{ else if eq .platform "youtube" }}
+            {{ $url = "https://youtube.com/" }}
+            {{ $svg = "/assets/feather-sprite.svg#youtube" }}
+        {{ end }}
+
+        <a href="{{ $url }}{{ .profile }}" target="__blank">
+            <svg class="feather">
+            <use href="{{ $svg }}" />
+            </svg>
+        </a>
+    {{ end }}
+</li>
+{{ end }}

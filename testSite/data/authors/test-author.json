@@ -1,0 +1,57 @@
+{
+    "name": "Test Author",
+    "socials": [
+        {
+            "platform": "github",
+            "profile": "test-author"
+        },
+        {
+            "platform": "gitlab",
+            "profile": "test-author"
+        },
+        {
+            "platform": "linkedin",
+            "profile": "test-author"
+        },
+        {
+            "platform": "youtube",
+            "profile": "test-author"
+        },
+        {
+            "platform": "website",
+            "profile": "https://test-author.xyz"
+        }
+    ],
+    "contacts": [
+        {
+            "type": "email",
+            "value": "test-email@email.com"
+        },
+        {
+            "type": "phone",
+            "value": "+1 123 456789101112"
+        }
+    ],
+    "tips": [
+        {
+            "type": "crypto",
+            "name": "bitcoin",
+            "value": "avdltq0nqqwt08k263qhv7vppzqg5kq9v28v9rubc1"
+        },
+        {
+            "type": "crypto",
+            "name": "monero",
+            "value": "GRMrMoXptCgtVeurC84gEq7vMsCkTmn8EaZEJ6XzDVmzk5QbbMqWxCMEEQR9ZeXmV444TjamK49C6HPKsd1G4AAuQPmPPwd"
+        },
+        {
+            "type": "link",
+            "name": "ko-fi",
+            "value": "https://ko-fi.com/test-author"
+        },
+        {
+            "type": "other",
+            "name": "my page",
+            "value": "https://test-author.xyz/donate"
+        }
+    ]
+}

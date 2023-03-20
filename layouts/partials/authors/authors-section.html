@@ -1,0 +1,18 @@
+{{ if .Params.authors }}
+    <details>
+        <summary>Written by</summary>
+        <ul>
+            {{ range .Params.authors }}
+                {{ $author := index $.Site.Data.authors . }}
+                {{ if $author.name }}
+                <li><strong>{{ $author.name }}</strong></li>
+                <ul>
+                    {{ partial "authors/socials.html" $author.socials }}
+                    {{ partial "authors/contacts.html" $author.contacts }}
+                    {{ partial "authors/tips.html" $author.tips }}
+                </ul>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </details>    
+{{ end }}

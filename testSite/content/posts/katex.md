@@ -5,6 +5,7 @@ tex: true
 useNextPrev: true
 draft: false
 tags: ["katex", "tag-1", "tag-2"]
+authors: ["test-author", "other"]
 ---
 
 # Tex usage test
@@ -19,9 +20,3 @@ Formula: $ \int(x) = \lambda \cdot {e}^{-\lambda - x} $
 
 All examples using [Katex](https://katex.org/)
 
-{{< author "Lucas Cavalheiro" >}}
-    {{< social type="github" profile="lgcavalheiro" >}}
-    {{< social type="linkedin" profile="lgcavalheiro" >}}
-    {{< social type="gitlab" profile="lgcavalheiro" >}}
-    {{< social profile="https://lgcavalheiro.xyz/" >}}
-{{< /author >}}

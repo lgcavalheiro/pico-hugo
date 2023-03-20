@@ -1,0 +1,10 @@
+{{ with . }}
+<li>
+    <i>Contacts</i>
+    <br>
+    {{ range . }}
+        <small>{{ .type | humanize }}: {{ .value }}</small>
+        <br>
+    {{ end }}
+</li>
+{{ end }}

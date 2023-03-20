@@ -1,0 +1,19 @@
+{{ with . }}
+<li>
+    <i>Tips</i>
+    <br>
+    {{ range . }}
+        <small>
+            {{ .name | humanize }}: 
+            {{ if eq .type "crypto" }}
+            <code>{{ .value }}</code>
+            {{ else if eq .type "link" }}
+            <a href="{{ .value }}">{{ .value }}</a>
+            {{ else }}
+            {{ .value }}
+            {{ end }}
+        </small>
+        <br>
+    {{ end }}
+</li>
+{{ end }}
