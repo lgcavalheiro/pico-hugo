@@ -39,7 +39,7 @@ paginate = 4 #Number of items per section page
 
 ### Front-matter configuration
 
-```toml
+```yaml
 title: "Katex"
 date: "2023-03-09T23:01:09-03:00"
 draft: false
@@ -53,7 +53,7 @@ authors: ["test-author", "other"] #Author list, names map to .json files inside 
 
 Just create a file `author-name.json` inside `/data/authors` folder, the json data should follow this format (sections `socials`, `contacts` and `tips` can be left empty):
 
-```json
+```jsonc
 {
   "name": "Test Author", //Author name
   "socials": [
