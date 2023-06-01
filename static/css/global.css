@@ -12,8 +12,17 @@ header {
 footer {
   clear: both;
   position: relative;
-  height: 64px;
-  margin-top: -32px;
+}
+
+article {
+  display: grid;
+}
+
+article > footer {
+  max-height: 136px;
+  place-self: end;
+  width: -moz-available;
+  width: -webkit-fill-available;
 }
 
 .link-nav a {

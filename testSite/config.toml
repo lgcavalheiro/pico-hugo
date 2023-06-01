@@ -8,4 +8,4 @@ paginate = 4
 [params]
     breadcrumb = true
     picoPath = "/vendor/pico-master/css/pico.min.css"
-    sectionType = "single"
+    sectionType = "cards"
